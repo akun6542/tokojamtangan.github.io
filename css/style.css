@@ -293,7 +293,7 @@ img {
     background-image: url('/images/bg1.jpg');
     background-size: cover;
     background-position: center;
-    color: #000;
+    color: #fff;
     text-align: center;
     padding: 100px 20px;
 }
@@ -367,4 +367,90 @@ img {
 
 .produk-kami p {
     font-size: 1.1rem;
+}
+
+/* Penyesuaian untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Padding yang lebih kecil di perangkat mobile */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Menu navbar diatur menjadi kolom */
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: none; /* Sembunyikan menu utama pada tampilan mobile */
+        flex-direction: column; /* Menu dropdown diatur menjadi kolom */
+        position: absolute;
+        top: 60px; /* Jarak dari atas */
+        right: 20px; /* Jarak dari kanan */
+        background-color: #1F4287;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Tampilkan menu dropdown saat tombol burger diklik */
+    }
+
+    .nav-menu li {
+        margin: 10px 0; /* Margin antara item menu diatur lebih besar */
+    }
+
+    .nav-menu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .product {
+        padding: 15px; /* Padding produk disesuaikan untuk mobile */
+        margin-bottom: 20px; /* Margin bawah produk disesuaikan untuk mobile */
+    }
+
+    .product h2 {
+        font-size: 1.2rem; /* Ukuran teks judul produk dikurangi untuk mobile */
+    }
+
+    .product button {
+        padding: 8px 16px; /* Padding tombol produk diatur lebih kecil untuk mobile */
+        margin-bottom: 10px; /* Margin bawah yang lebih kecil untuk tombol produk */
+    }
+
+    .modal-content {
+        padding: 10px; /* Padding modal disesuaikan untuk perangkat mobile */
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem; /* Ukuran teks judul modal dikurangi */
+    }
+
+    .modal-content p {
+        font-size: 1rem; /* Ukuran teks isi modal dikurangi */
+    }
+
+    .contact h2 {
+        font-size: 2rem; /* Ukuran teks judul kontak diatur untuk mobile */
+    }
+
+    .contact p {
+        font-size: 1.2rem; /* Ukuran teks isi kontak diatur untuk mobile */
+    }
+
+    .contact ul {
+        font-size: 1rem; /* Ukuran teks daftar kontak diatur untuk mobile */
+    }
+
+    .produk-kami h2 {
+        font-size: 1.8rem; /* Ukuran teks judul produk kami diatur untuk mobile */
+    }
+
+    .produk-kami p {
+        font-size: 1rem; /* Ukuran teks isi produk kami diatur untuk mobile */
+    }
 }
