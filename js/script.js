@@ -47,4 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`Added ${quantity} item(s) to cart.`);
         // Implement your actual add to cart logic here
     }
+
+    // Handle menu toggle (hamburger button) for mobile view
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 });
